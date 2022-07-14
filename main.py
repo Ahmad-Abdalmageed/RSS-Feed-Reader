@@ -18,5 +18,7 @@ def rssReaderAPI(url: str) -> None:
 
 if __name__ == '__main__':
     # Example reading from Indeed Egypt the Feed for Software Engineer Search
-    rssURL: str = 'https://eg.indeed.com/rss?q=software%20engineer&l=cairo&sort=date&vjk=bb9215551b02825d'
-    rssReaderAPI(rssURL)
+    rssURLS = list(input("Enter RSS Feeds (seperated by space ):").split(' '))
+    for number, rssURL in enumerate(rssURLS):
+        print(f"######################### RSSFeed {number + 1} ##################################")
+        rssReaderAPI(rssURL)
